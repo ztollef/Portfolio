@@ -1,0 +1,37 @@
+.card {
+    width: 500px;
+    max-width: 70vw;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 2px solid black;
+    margin: 0.5em;
+}
+.card h3 {
+    transition: color 0.5s;
+}
+
+.card img {
+    display: block;
+}
+
+.card:hover h3 {
+    color: #11bb99;
+}
+
+.description {
+    margin: 1em;
+}
+
+.skills {
+    margin: 1em;
+}
+
+.links {
+    margin: 1em;
+}
+
+.links a{
+    padding-right: 1em;
+}

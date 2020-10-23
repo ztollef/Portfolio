@@ -1,38 +1,224 @@
+
+body, html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+a {
+  font-size: 16px;
+}
+
+li {
+  font-size: 16px;
+}
+
+h2, h3, h4 {
+  color: rgb(80, 85, 87);
+  padding: 8px;
+}
+
 .App {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex > * {
+  flex: 1 1 250px;
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.section {
+  padding-top: 62px; 
+  max-width: 100%;
+}
+
+.section h1{
+  color: rgb(29, 30, 31);
+  font-size: 2em;
+}
+
+.bottom-spacer {
+  height: 70vh;
+}
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(252, 252, 252);
+  z-index: 1;
+  display: flex;
+  top: -100px;
+  left: 0;
+  transition: top 0.5s;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 16px;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.arrow {
+  border: solid rgb(252, 252, 252);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.active {
+  top: 0;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.nav-item {
+  color: rgba(55, 64, 66, 0.568);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  outline: none;  
+  background-color: transparent;
+  transition: all 0.5s;
+  margin-right: 1em;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-items button {display: none}
+  nav .nav-contact-methods{display: none;}
+  .navbar a.icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    padding: 16px;
+  }
+  }
+
+@media screen and (max-width: 600px) {
+  .minimize {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .minimize .nav-items button {
+    float: none;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 8px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.selected {
+  color: #11bb9a;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
+.nav-contact-methods {
+  margin-left: 0.25em;
+}
+
+.nav-contact-methods a {
+  margin-left: 1em;
+}
+
+.nav-logo {
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+  outline: none;  
+  background-color: transparent;
+  font-weight: bold;
+}
+
+
+/*Introduction*/
+
+.container-intro {
+  height: 98vh;
+  background-color: rgb(252, 252, 252);
+  transition: all 0.5s;
+  margin-top: 5em;
+  max-width: 100%;
+}
+
+.trans {
+  background-color: rgb(252, 252, 252);
+  background-image: none;
+}
+
+.name {
+  font-size: 2.5em;
+  line-height: .8em;
+  animation: loadName 0.5s;
+}
+
+.role {
+  font-size: 2.5em;
+  animation: loadName .6s;
+}
+
+.cta-button {
+  background-color: #11bb99;
+  color: rgb(252, 252, 252); 
+  font-size: 0.5em;
+  width: 10em;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(55, 64, 66,0.2), 0 6px 20px 0 rgba(55, 64, 66,0.19);
+  transition: all 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  opacity: 0;
+  animation: loadName 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+.cta-button:hover {
+  background-color: #11bb99ad;
+}
+
+@keyframes loadName{
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(100px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
