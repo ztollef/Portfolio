@@ -1,16 +1,14 @@
-.container-about{
+.container-about {
     max-width: 100%;
-}
-
-.profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     margin: 16px;
     align-items: center;
 }
 
 .profile-pic{
+    display: block;
     width: 10em;
     max-width: 400px;
     height: 10em;
@@ -20,13 +18,16 @@
 
 .summary {
     margin: 1em;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .summary h4 {
     margin-top: 16px;
 }
 
+.summary p {
+    padding-top: 16px;
+}
 
 .skill-areas {
     display: flex;

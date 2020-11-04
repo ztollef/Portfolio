@@ -12,40 +12,32 @@ const Projects = () => {
                     <Project  
                     title="Kanban Board"  
                     description="An agile project management tool for tracking bugs, enhancements, and other tasks in a project pipeline."
-                    skills="React, Bootstrap, Node.js, SQL"
-                    githublink="www.github.com/ztollef/kanban-board"
-                    livesite="www.zachtollefson.com"
+                    githublink="https://github.com/ztollef/kanban-board"
+                    livesite="https://zachtollefson.com/kanban-board"
                     />
                 </div>
                 <div className="project">
                     <Project className="project"
                     title="COVID-19 Tracker"  
                     description="Uses data from Johns Hopkins to visualize COVID-19 cases across the world."
-                    skills="Typescript, SASS"
-                    githublink="www.github.com/ztollef/covid-tracker"
-                    livesite="www.zachtollefson.com"
+                    githublink="https://github.com/ztollef/covid-tracker"
+                    livesite="https://zachtollefson.com/covid-tracker"
                     />
                 </div>
                 <div className="project">
                     <Project className="project"
-                    title="Fido Fetch API"  
-                    description="An open source RESTful API where users can pull information about different dog breeds, including temperament, life expectancy, and weight."
-                    skills="REST API, Node.js, Express, MySQL"
+                    title="Face Recognition App"  
+                    description="An application that demonstrates how far facial recognition technology has come. Input a URL to an image of a face and the app will draw a box around the face."
+                    githublink="https://github.com/ztollef/face-recognition"
+                    livesite="https://zachtollefson.com/face-recognition"
                     />
-                </div>
-                <div className="project">
-                    <Project className="project"
-                    title="Vintage Videogame E-Commerce"  
-                    description="Mock e-commerce site for finding and purchasing vintage videogames. Complete with a front-end, back-end, and connection to database. Features include authentication, connection to Paypal API, security."
-                    skills="React, Redux, Node.js, Express, JWT Authentication, Single Page Application, MySQL" />
                 </div>
                 <div className="project">
                     <Project className="project"
                     title="Portfolio Site"  
                     description="My personal portfolio site. You're on it now!"
-                    skills="React, Typescript, SASS"
-                    githublink="www.github.com/ztollef/covid-tracker"
-                    livesite="www.zachtollefson.com"
+                    githublink="https://github.com/ztollef/ztollef.github.io"
+                    livesite="https://zachtollefson.com/"
                      />
                 </div>
             </div>

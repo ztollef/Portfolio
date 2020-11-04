@@ -1,5 +1,5 @@
 import React from 'react';
-import './project.css'
+import './project.css';
 
 class Project extends React.Component {
     render() {
@@ -8,10 +8,10 @@ class Project extends React.Component {
                 <div>
                     <h3 className="title">{this.props.title}</h3>
                     <p className="description">{this.props.description}</p>
-                    <p className="skills"><b>Skills:</b> {this.props.skills}</p>
+                    {/* <p className="skills"><b>Skills:</b> {this.props.skills}</p> */}
                     <div className="links">
-                        <a href="#">Live Site</a> 
-                        <a href="#">GitHub Repo</a>
+                        <a href={this.props.livesite}>Live Site</a> 
+                        <a href={this.props.githublink}>GitHub Repo</a>
                     </div>
                 </div>
                 
