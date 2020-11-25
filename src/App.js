@@ -2,9 +2,9 @@ import React, {useRef, useEffect, useState} from 'react';
 import './App.css';
 import Projects from "./components/projects/projects";
 import About from "./components/about/about";
-import Contact from "./components/contact/contact"
+import Contact from "./components/contact/contact";
 
-import github from "./assets/GitHub-Mark-64px.png"
+import github from "./assets/GitHub-Mark-64px.png";
 import linkedin from "./assets/LI-In-Bug.png";
 import email from "./assets/icons8-new-post-96.png";
 
@@ -17,7 +17,7 @@ const getDimensions = ele => {
       height,
       offsetTop,
       offsetBottom
-  }
+  };
 };
 
 const scrollTo = ele => {
@@ -25,7 +25,7 @@ const scrollTo = ele => {
       behavior: "smooth",
       block: "start",
     });
-}
+};
 
 const App = () => {
  
@@ -102,15 +102,13 @@ const App = () => {
           <div className="nav-items">
             <button type="button" className={`nav-item ${visibleSection === "Projects" ? "selected" : ""}`} onClick={() => {scrollTo(projectsRef.current)}}>Projects</button>
             <button type="button" className={`nav-item ${visibleSection === "About" ? "selected" : ""}`} onClick={() => {scrollTo(aboutRef.current)}}>About</button>           
-            <button type="button" className={`nav-item ${visibleSection === "Contact" ? "selected" : ""}`} onClick={() => {scrollTo(contactRef.current)}}>Contact</button>
           </div>
-          
         </nav>
         <div className="section container-intro flex" id="Intro" ref={introRef}>           
           <div> 
             <h1 className="name">Zach Tollefson</h1>
             <h2 className="role">Full-Stack Developer</h2>
-            <button className="cta-button" onClick={() => {scrollTo(projectsRef.current)}}>View my work <i className="arrow down"></i></button>
+            <button className="cta-button" onClick={() => {scrollTo(projectsRef.current)}}>View my work</button>
           </div> 
         </div>
         <div className="flex section" id="Projects" ref={projectsRef}>
@@ -119,10 +117,9 @@ const App = () => {
         <div className="flex section" id="About" ref={aboutRef} >
           <About />
         </div>
-        <div className="flex section" id="Contact" ref={contactRef} >
+        <div className="section" id="Contact" ref={contactRef} >
           <Contact />
         </div>
-        <div className="bottom-spacer" />
       </div>
     );
   }

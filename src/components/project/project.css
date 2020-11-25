@@ -1,15 +1,19 @@
 .card {
     width: 70vw;
     max-width: 700px;
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin: 0.5em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 8px 16px 0 rgba(0,0,0,0.19);
+    margin: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 4px 8px 0 rgba(0,0,0,0.19);
 }
 .card h3 {
     transition: color 0.5s;
+}
+
+.title {
+  font-size: min(1em, 35px);
 }
 
 .card img {
@@ -29,7 +33,7 @@
 }
 
 .links {
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .links a{

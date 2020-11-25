@@ -43,13 +43,13 @@ h2, h3, h4 {
 }
 
 .section {
-  padding-top: 62px; 
+  padding-top: 62px;
   max-width: 100%;
 }
 
-.section h1{
+.section h1 {
   color: rgb(29, 30, 31);
-  font-size: 2em;
+  font-size: min(2em, 70px);
 }
 
 .bottom-spacer {
@@ -120,7 +120,11 @@ h2, h3, h4 {
     font-size: 22px;
     padding: 16px;
   }
+  nav { 
+    
+  box-shadow: 0 8px 16px 0 rgba(55, 64, 66,0.2), 0 6px 20px 0 rgba(55, 64, 66,0.19);
   }
+}
 
 @media screen and (max-width: 600px) {
   .minimize {
@@ -163,7 +167,6 @@ h2, h3, h4 {
   font-weight: bold;
 }
 
-
 /*Introduction*/
 
 .container-intro {
@@ -180,25 +183,25 @@ h2, h3, h4 {
 }
 
 .name {
-  font-size: 2.5em;
   line-height: .8em;
   animation: loadName 0.5s;
 }
 
 .role {
-  font-size: 2.5em;
+  font-size: min(1em, 35px);
   animation: loadName .6s;
 }
 
 .cta-button {
   background-color: #11bb99;
   color: rgb(252, 252, 252); 
-  font-size: 0.5em;
-  width: 10em;
+  font-size: 16px;
+  width: 8em;
+  max-width: 200px;
   margin-top: 10px;
   padding: 10px;
   box-shadow: 0 8px 16px 0 rgba(55, 64, 66,0.2), 0 6px 20px 0 rgba(55, 64, 66,0.19);
-  transition: all 0.5s;
+  transition: loadName 0.5s;
   cursor: pointer;
   font-weight: bold;
   border: none;
